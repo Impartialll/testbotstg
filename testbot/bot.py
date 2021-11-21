@@ -9,7 +9,7 @@ bot = telebot.TeleBot(config.config['token'])
 def get_text(message):
     bot.send_message(message.id, 'Hello, my name is Mike!\nAnd what do you want?')
 
-@bot.message_handler(commands = ['calc'])
+@bot.message_handler(text = ['calc'])
 def get_text(message):
     if commands.text == ''
         bot.send_message(message.chat.id, message.text*100)
